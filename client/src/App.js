@@ -5,10 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ImageUpload from "./components/ImageUpload";
 
 function App() {
-  console.log(
+  /*   console.log(
     "process.env.REACT_APP_BACK_URL: ",
     process.env.REACT_APP_BACK_URL
-  );
+  ); */
   return (
     <div className="container">
       {/*       <h3>
