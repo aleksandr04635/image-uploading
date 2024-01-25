@@ -2,8 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/server/index.js"
-    },
-    { "source": "/(.*)", "destination": "/" }
+      "destination": "/server"
+    }
   ]
 }
