@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd client && npm i && ./node_modules/webpack/bin/webpack.js build",
+  "outputDirectory": "client/build",
+  "framework": "react",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/server/index.js"
+    },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
