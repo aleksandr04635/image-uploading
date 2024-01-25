@@ -1,7 +1,4 @@
 {
-  "buildCommand": "cd client && npm i && ./node_modules/webpack/bin/webpack.js build",
-  "outputDirectory": "client/build",
-  "framework": "create-react-app",
   "rewrites": [
     {
       "source": "/(.*)",
