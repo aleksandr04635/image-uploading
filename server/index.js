@@ -49,3 +49,4 @@ app.listen(port, () => {
     console.log(`Running at localhost:${port}`);
   }
 });
+module.exports = app;
