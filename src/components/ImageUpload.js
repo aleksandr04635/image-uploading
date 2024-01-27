@@ -46,8 +46,8 @@ const ImageUpload = () => {
   useEffect(() => {
     console.log("run useEffect");
     getFiles().then((response) => {
-      setImageInfos(response.data);
       console.log("response.data: ", response.data);
+      setImageInfos(response.data);
     });
   }, []);
 
