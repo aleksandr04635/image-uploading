@@ -7,3 +7,10 @@ https://www.bezkoder.com/react-image-upload-preview-hooks/     With mistakes cor
 copied from new4\express-upload-download  back to it
 
 image uploading with progressbar and downloading to fs and cloudinary
+
+according to example
+new4/mern-vercel-deploy
+made according to video
+https://www.youtube.com/watch?v=ARNltlTxGZE
+deployed to vercel
+https://image-uploading.vercel.app/
