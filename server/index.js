@@ -29,6 +29,12 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 
+//test
+app.get("/api/files-from-cloud", function (req, res) {
+  console.log("/api/files-from-cloud");
+  res.json({});
+});
+
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "build"))); //react dep
