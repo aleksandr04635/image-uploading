@@ -25,13 +25,13 @@ origin: Configures the Access-Control-Allow-Origin CORS header. Possible values:
 */
 var corsOptions = {
   //origin: "http://localhost:8081",
-  origin: process.env.FRONT_URL,
+  // origin: process.env.FRONT_URL,
 };
 app.use(cors(corsOptions));
 
 //test
-app.get("/api/files-from-cloud", function (req, res) {
-  console.log("/api/files-from-cloud");
+app.get("/server/files-from-cloud", function (req, res) {
+  console.log("/server/files-from-cloud");
   res.json({});
 });
 
