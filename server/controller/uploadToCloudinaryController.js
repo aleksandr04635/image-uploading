@@ -4,6 +4,7 @@ const path = require("path");
 const Image = require("../models/Image.js");
 const multer = require("multer");
 const DatauriParser = require("datauri/parser");
+const mongoose = require("mongoose");
 
 const parser = new DatauriParser();
 
@@ -63,6 +64,10 @@ const uploadFromTinyMCEToCloudinary = [
       console.log("uploadResult: ", uploadResult);
       //res.send('Done');
       // return res.json({cloudinaryId: uploadResult.public_id, url: uploadResult.secure_url});
+      mongoose
+        .connect(process.env.MONGODB_URI)
+        .then(() => console.log(`DB connected to ${process.env.MONGODB_URI}`))
+        .catch((err) => console.log("DB error", err));
       Image.create({
         name: req.file.originalname,
         url: uploadResult.url,
@@ -90,6 +95,10 @@ const uploadFromTinyMCEToCloudinary = [
 ];
 
 const getListFilesCloud = async (req, res) => {
+  mongoose
+    .connect(process.env.MONGODB_URI)
+    .then(() => console.log(`DB connected to ${process.env.MONGODB_URI}`))
+    .catch((err) => console.log("DB error", err));
   /*   const directoryPath = __basedir + "/resources/static/assets/uploads/";
 
   var baseUrl = "http://" + req.headers.host + "/files/";
