@@ -118,6 +118,7 @@ const getListFilesCloud = async (req, res) => {
     fileInfos.reverse();
     res.status(200).send(fileInfos);
   }); */
+  console.log("asked for images");
   res.json(await Image.find().sort({ createdAt: -1 }));
 };
 

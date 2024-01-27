@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, "build"))); //react dep
 //initRoutes(app);
 
 const upRouter = require("./routes/indexRouter");
-app.use("/server/", upRouter);
+app.use("/api/", upRouter);
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html")); //only after build integration
